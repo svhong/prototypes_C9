@@ -61,9 +61,9 @@ app.controller('htmlFund1Controller', function(){
 
     this.demo = {
         'Video Prototype Demo': {
-            title: "HTML Fundamentals 1",
+            title: "HTML Fundamentals 2",
             link: "https://www.youtube.com/watch?v=FEktv4o7VGg",
-            live: true
+            live: false
         }
     };
 
