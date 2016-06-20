@@ -44,7 +44,7 @@ app.config(function($routeProvider, navigationProvider){
             },
             {
                 title: 'HTML-Fundamentals-2',
-                date: toTs('6/18/2016 08:00'),
+                date: toTs('6/18/2016 08:01'),
                 controller: 'htmlFund2Controller',
                 template: 'featureSetsB.html'
             },
@@ -168,7 +168,7 @@ app.config(function($routeProvider, navigationProvider){
             },
             {
                 title: 'JS-Primitive-Data-Types',
-                date: toTs('6/18/2016 08:00'),
+                date: toTs('6/18/2016 08:02'),
                 controller: 'jsPrimDataTypesController',
                 template: 'featureSetsB.html'
             }
@@ -304,7 +304,7 @@ app.config(function($routeProvider, navigationProvider){
         Example: [
             {
                 title: 'Example-1',
-                date: toTs('6/18/2016 08:00'),
+                date: toTs('6/18/2016 07:00'),
                 controller: 'exampleController',
                 template: 'featureSetsA.html'
             }
