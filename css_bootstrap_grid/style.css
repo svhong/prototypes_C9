@@ -1,0 +1,35 @@
+.featureset_1 div,
+.featureset_2 div,
+.featureset_3 div,
+.featureset_4 div {
+    border: 2px solid;
+    height: 20vh;
+}
+
+.featureset_1  {
+    margin-top: 10vh;
+}
+
+.featureset_1 div {
+    background-color: lightblue;
+    border-color: blue;
+}
+
+.featureset_2 div {
+    background-color: pink;
+    border-color: red;
+}
+
+.featureset_3 div {
+    background-color: lightyellow;
+    border-color: yellow;
+}
+
+.featureset_4 div {
+    background-color: lavender;
+    border-color: purple;
+}
+
+.featureset_4 div:last-child {
+    background-color: lavenderblush;
+}
