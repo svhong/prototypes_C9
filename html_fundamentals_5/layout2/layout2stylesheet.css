@@ -1,9 +1,0 @@
-#header {
-    height:15vh;
-    /*color added to distinguish header div*/
-    background-color:green;
-}
-#headerMenu{
-    list-style-type:none;
-    display:inline-block;
-}
