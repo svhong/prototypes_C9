@@ -41,11 +41,61 @@
     <script>
         $(document).ready(function () {
             //playground 1 code
+             var playh1 = $("<h1>", {
+                 text: "I am a heading"
+             });
+             var playp1 = $('<p>',{
+                text: "This is an awesome paragraph",
+             });
+             var playp2 = $('<p>',{
+                 text: "This has red text",
+                 style: 'color:red'
 
+             });
+
+            $("#playground1").append(playh1,playp1,playp2);
             //playground 2 code
-
+            var playDiv1 = $('<div>', {
+                text: 'Here is some awesome div text',
+                addClass: 'awesome_class'
+            });
+            var playDiv2 = $('<div>',{
+                text: 'Here is MORE awesome div text',
+                addClass: 'awesome_class'
+            });
+            var playDiv3 = $('<div>',{
+                html: "This is <strong>EVEN MORE</strong> awesome div text",
+                addClass: 'awesome_class'
+                });
+            $('#playground2').append(playDiv1,playDiv2,playDiv3);
             //playground 3 code
+            var playUl = $('<ul>', {
+                addClass: 'neato'
+            });
+            var playLi1 = $('<li>', {
+               text:'Link 1'
+           });
+            var playLi2 = $('<li>',{
+                text:'Link 2'
+            });
+            var playLi3 = $('<li>',{
+                text:'Link 3'
+            });
+            var playFigure = $('<figure>',{
+                addClass:'awesome_picture',
+            });
+            var playPic = $('<img>',{
+               src:"http://comerecommended.com/wp-content/uploads/2013/01/how-to-get-awesome-back.jpg"
+            });
+            var playCap = $('<figcaption>',{
+                html:'That\'s right, <span class="bold_text"> you are</span>',
+
+            });
+            playUl.append(playLi1,playLi2,playLi3);
+            playFigure.append(playPic,playCap);
+            $('#playground3').append(playUl, playFigure);
         });
+
     </script>
 </head>
 <body>
@@ -62,6 +112,7 @@
     <div class="playground playground_destination" id="playground1">
         <!--copy code into here using jQuery ONLY-->
         <!-- ******** NO COPY AND PASTE ******** -->
+
     </div>
 
     <!-- ************** Playground 2 ************** -->
