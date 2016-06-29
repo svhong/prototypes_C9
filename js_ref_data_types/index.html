@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Reference Data Types</title>
+    <script>
+        var student_array = ['Nick','Kevin','Joshua','Nytara','Bill'];
+        console.log(student_array[2]);
+        console.log(student_array);
+        console.log(student_array.length);
+        student_array.push('Harroon','Rosemary');
+        console.log(student_array.length);
+        console.log(student_array);
+        var student = {};
+        student.firstName = 'Sean';
+        student.lastName = 'Hong';
+        student.age = 31;
+        student.school = 'Learning Fuze';
+        student.questionList = [];
+        student.hasQuestion = false;
+        student.greeting = function(){
+            return 'Hello, my name is ' + this.firstName;
+        };
+        student.aboutMe = function(){
+            return 'My full name is ' + this.firstName + ' ' + this.lastName + ', I am ' + this.age +
+                    ' years old and I am a student at ' + this.school + '.';
+        };
+        student.askQuestion = function(question){
+            student.questionList.push(question);
+            student.hasQuestion = true;
+            return 'A question has been added to your list.'
+        };
+        student.answerQuestion = function(){
+            if (student.hasQuestion == true){
+                student.hasQuestion = false;
+                return student.questionList[student.questionList.length-1]
+            }
+            else {
+                return 'There are no pending questions.'
+            }
+
+        };
+        console.log("Greeting function: ", student.greeting());
+        console.log("About Me function: ", student.aboutMe());
+        console.log("Answer Question function: ", student.answerQuestion());
+        console.log("Ask Question function: ", student.askQuestion("How are you doing?"));
+        console.log("Ask Question function: ", student.askQuestion("How old are you?"));
+        console.log("Ask Question function: ", student.askQuestion("Are you hungry?"));
+        console.log("Answer Question function: ", student.answerQuestion());
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
