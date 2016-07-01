@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS design Layout 2</title>
+    <style>
+        body {
+            margin:0;
+            padding: 0;
+        }
+        header {
+            position: relative;
+        }
+
+        .mainHeaderdiv {
+            display: inline-block;
+            width:100%;
+            height:20%;
+
+        }
+        .mainHeaderdiv > header {
+            background-color: red;
+            height:200px;
+                    }
+        header > img {
+            width: 30%;
+            height: 85%;
+            display: inline-block;
+            margin:15px 0 0 10px;
+        }
+        .baconShop {
+            display: inline-block;
+            color: salmon;
+            text-shadow: 2px 2px black;
+            position: relative;
+        }
+        .headerMenu {
+            display: inline-block;
+            position: relative;
+            left: 2%;
+        }
+        .menuList {
+            display: inline-block;
+            list-style-type: none;
+            color: salmon;
+            text-shadow: 2px 2px black;
+            right:40px;
+        }
+        .menuList > li {
+            display: inline-block;
+            margin: 3px;
+            padding: 3px;
+            font-size: 18px;
+            font-family: "Comic Sans MS";
+            text-transform: capitalize;
+
+        }
+        a:link {
+            color: salmon;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        #fs-2 {
+            display:inline-block;
+            width: 100%;
+            height: 30%;
+
+        }
+        .fs2Div1 {
+            display: inline-block;
+            background-color: darksalmon;
+            width:20%;
+            height:30vh;
+            float: left;
+            text-align: center;
+            font-family: Georgia;
+            font-size: 61px;
+            text-shadow: 2px 2px black;
+            color: salmon;
+
+        }
+        .fs2Div2 {
+            display: inline-block;
+            background-color: hotpink;
+            width: 80%;
+            height:30vh;
+            text-align: center;
+            font-family: Georgia;
+            font-size: 85px;
+            text-shadow: 2px 2px black;
+            color: salmon;
+
+            }
+        #fs-3 {
+            display:inline-block;
+            width: 100%;
+            height: 30%;
+
+        }
+
+        .fs3Div1 {
+            display:inline-block;
+            width: 20%;
+            height: 30vh;
+            background-color: deeppink;
+            text-align: center;
+            font-family: Georgia;
+            font-size:60px;
+            text-shadow: 2px 2px black;
+            color: salmon;
+            overflow:auto;
+
+
+        }
+        .fs3Div2 {
+            display: inline-block;
+            width: 80%;
+            height: 30vh;
+            background-color: palevioletred;
+            text-align: center;
+            font-family: Georgia;
+            font-size: 112px;
+            text-shadow: 2px 2px black;
+            color: salmon;
+            overflow: auto;
+        }
+
+        .mainFooter {
+            height:20vh;
+        }
+        .mainFooter > div {
+            background-color: red;
+            margin: 0;
+            font-family:Gabriola;
+            font-size:128px;
+            text-align: center;
+            text-shadow: 2px 2px black;
+            color: salmon;
+            overflow: auto;
+        }
+        .container {
+            width: 70vw;
+            display: inline-block;
+            left: 15vw;
+            position: relative;
+            
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="mainHeaderdiv">
+        <header>
+            <img src="images/bacon.png" alt="bacon"><!--
+            --><h1 class="baconShop">
+                The Bacon Shop
+            </h1>
+            <nav class="headerMenu">
+                <ul class="menuList">
+                    <li><a href="home.html">home</a></li>
+                    <li><a href="aboutus.html">about us</a></li>
+                    <li><a href="ourmenu.html">our menu</a></li>
+                    <li><a href="contactus.html">contact us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <section id="fs-2">
+        <div class="fs2Div1">bacon, bacon, bacon</div><!--
+        --><div class="fs2Div2">Who loves bacon? That's right, you do!</div>
+    </section>
+    <section id="fs-3">
+        <div class="fs3Div1">If you don't like bacon</div><!--
+        --><div class="fs3Div2">You're a vegetarian!</div>
+    </section>
+    <footer class="mainFooter">
+        <div>bacon wins</div>
+    </footer>
+</div>
+
+
+</body>
+</html>
