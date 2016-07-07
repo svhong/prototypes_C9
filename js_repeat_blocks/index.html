@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Repeat Blocks</title>
+    <script>
+        var numbers = [1,2,3,4,5,6,7,8,9,10];
+        var mixedArray = [4, 56, 11, 13, 97, 22, 7, 36, 19, 5, 8, 10]
+        for (i=0;i<numbers.length;i++){
+            console.log(numbers[i]);
+        }
+        for (i=11;i>-1;i--){
+            console.log(numbers[i]);
+        }
+        for (i=0;i<numbers.length;i++){
+            console.log(numbers[i++])
+        }
+        for (i=0;i<mixedArray.length;i++){
+            if (mixedArray[i]%2 != 0){
+                console.log(mixedArray[i])
+            }
+        }
+        var classRoom = {desk1: 'Stu', desk2: 'Peggy', desk3: 'LoneStar', desk4: 'George', desk5: 'Sheldon'}
+        for(var index in classRoom){
+            console.log(classRoom[index],' is at ',index)
+        }
+          var studentArray = [{name: "Bob", grade: 87}, {name: "Fred", grade: 82}, {name: "George", grade: 93},
+                              {name: "Robert", grade: 85}];
+          function findstudent(studentName) {
+              var i = 0;
+              while (i != studentArray.length) {
+                  if (studentName == studentArray[i].name) {
+                    console.log("Found "+studentArray[i].name+" their grade is: " +studentArray[i].grade);
+                      return;
+                  }
+                  else {
+                      i++;
+                  }
+              }
+              console.log("Student "+studentName+" not found.")
+          }
+        console.log("Test 1:", findstudent("George"));
+        console.log("Test 2:", findstudent('Fred'));
+        console.log("Test 3:", findstudent('Hank'));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
