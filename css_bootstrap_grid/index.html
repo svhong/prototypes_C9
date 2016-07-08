@@ -4,7 +4,7 @@
     <title>CSS Bootstrap Grid System</title>
 
     <!-- Enter the Bootstrap CDN address into the link below -->
-    <link rel="stylesheet" href="BOOTSTRAP ADDRESS HERE">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <!-- Note: Your stylesheets should always come after the Bootstrap stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -14,24 +14,24 @@
 
 <div id="bootstrap_grids" class="container-fluid">
     <div class="featureset_1 row">
-        <div>Make me 33% wide</div>
-        <div>Make me 33% wide</div>
-        <div>Make me 33% wide</div>
+        <div class="col-md-4">Make me 33% wide</div>
+        <div class="col-md-4">Make me 33% wide</div>
+        <div class="col-md-4">Make me 33% wide</div>
     </div>
     <div class="featureset_2 row">
-        <div>Make me 50% wide</div>
-        <div>Make me 25% wide</div>
-        <div>Make me 25% wide</div>
+        <div class="col-md-6">Make me 50% wide</div>
+        <div class="col-md-3">Make me 25% wide</div>
+        <div class="col-md-3">Make me 25% wide</div>
     </div>
     <div class="featureset_3 row">
-        <div>17% wide with 8% gutter on the left</div>
-        <div>Make me 42% wide</div>
-        <div>17% wide with a 17% gutter on the right</div>
+        <div class="col-md-offset-1 col-md-2">17% wide with 8% gutter on the left</div>
+        <div class="col-md-5">Make me 42% wide</div>
+        <div class="col-md-2">17% wide with a 17% gutter on the right</div>
     </div>
     <div class="featureset_4 row">
-        <div>25% wide on desktop, 100% wide on mobile</div>
-        <div>50% wide of desktop, 100% wide on mobile</div>
-        <div>25% wide on desktop, invisible on mobile</div>
+        <div class="col-md-3 col-xs-12">25% wide on desktop, 100% wide on mobile</div>
+        <div class="col-md-6 col-xs-12">50% wide of desktop, 100% wide on mobile</div>
+        <div class="cal-md-3 hidden-xs">25% wide on desktop, invisible on mobile</div>
     </div>
 </div>
 
