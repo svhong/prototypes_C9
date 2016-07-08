@@ -1,0 +1,102 @@
+body {
+    height: 600px;
+    width: 1200px;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    background-color: lightblue;
+    border-bottom: 3px solid black;
+
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header li {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 3px;
+}
+
+header li:nth-child(odd) {
+    color: lightgreen;
+}
+
+header li:nth-child(even){
+    color: green;
+}
+
+section {
+    text-align: center;
+}
+
+section h2 {
+    position: relative;
+}
+section div {
+    height: 80px;
+    width: 80px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+section div:nth-child(2) {
+    position: absolute;
+    background-color: red;
+    left: 25%;
+    top: 27%;
+}
+
+section div:nth-child(3) {
+    position: relative;
+    background-color: blue;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+section div:nth-child(4) {
+    position: absolute;
+    background-color: yellow;
+    top: 27%;
+    right: 25%;
+
+
+}
+
+section p {
+    color: lavender;
+}
+
+section p:nth-child(even) {
+    background-color: darkgray;
+    padding: 4px 0;
+}
+
+section p:nth-child(7) {
+    display: inline;
+    color: white;
+    background-color: blue;
+    font-size: 22px;
+    padding:4px;
+}
+
+footer {
+    text-align: center;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+footer h1 {
+    color: darkblue;
+
+}
+
+footer p {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
