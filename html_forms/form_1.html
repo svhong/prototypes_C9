@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Forms</title>
+    <style>
+        .textInput {
+            background-color: lightblue;
+            font-family: Georgia;
+            border-color: yellowgreen;
+            box-shadow: 3px 3px 5px black;
+        }
+    </style>
+</head>
+<body>
+<form action="http://danielpaschal.com/learningfuze/reflect.php" method="get">
+    <input type="text" class="textInput">
+    <br>
+    <input type="text" class="textInput">
+    <br>
+    <br>
+    <textarea rows="5" cols="50">
+        This is the text area!
+    </textarea>
+    <br>
+
+    <input type="radio" name="fav_food" id="favmeat" value="meat"><label for="favmeat">steak</label>
+    <br>
+    <input type="radio" name="fav_food" id="favcarbs" value="rice"><label for="favcarbs">curry</label>
+    <br>
+    <input type="radio" name="fav_food" id="favsauce" checked="checked"><label for="favsauce">tabasco</label>
+    <br>
+    <br>
+    <input type="checkbox" name="fav_game" id="favgame1" value="diablo3" checked="checked"><label for="favgame1">diablo 3</label>
+    <br>
+    <input type="checkbox" name="fav_game" id="favgame2" value="dota2"><label for="favgame2">dota 2</label>
+    <br>
+    <input type="checkbox" name="fav_game" id="favgame3" value="streetfighter4"><label for="favgame3">street fighter 4</label>
+    <br>
+    <input type="checkbox" name="fav_game" id="favgame4" value="zelda oot" disabled checked="checked"><label for="favgame4">zelda oot</label>
+    <br>
+    <br>
+    <select name="fav_movie" id="favmovie">
+        <option>--Select Movie--</option>
+        <option value="bttf">back to the future</option>
+        <option value="comc">count of monte cristo</option>
+        <option value="matrix">the matrix</option>
+        <option value="johnwick">john wick</option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" name="submit_button" value="submit">
+</form>
+</body>
+</html>
