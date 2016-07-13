@@ -1,0 +1,53 @@
+<ol class='left-border'>
+    <li>This prototype includes the following files
+    	<ul>
+    		<li><code>index.html</code>: main index file</li>
+    		<li><code>skeleton.html</code>: static skeleton example</li>
+    		<li><code>pets.js</code>: data file</li>
+    		<li><code>main.js</code>: main code file</li>
+    		<li><code>style.css</code>: main style sheet</li>
+    		<li><code>assets</code>: additional assets</li>
+    	</ul>
+    </li>
+</ol>
+<h3>DOM - variable tie in: custom attributes</h3>
+<ol class='left-border'>
+    <li>
+    	Use the array pets in pets.js to dynamically fill the div #row_display
+    </li>
+    <li>
+		Apply a click handler to the click event of each .data_row as you make it. 
+	</li>
+	<li>
+		Also add a custom attribute to each .data_row: 'data-index'
+	</li>
+	<li>
+		In the click handler, find the 'data-index' attribute of the element that was clicked.  Use it to find the index of the pets array element associated with the row
+	</li>
+	<li>
+		Once you get the array element, use it to fill in the respective elements of the #detail_display div
+	</li>
+</ol>
+
+
+<h3>DOM - associated variable</h3>
+<ol class='left-border'>
+    <li>
+    	Once you get the previous section to work, now attempt to get the same index by accessing the for loop's variable to get the associated index.
+    </li>
+    <li>
+		console.log the value of the index from the for loop when the click handler is clicked 
+	</li>
+	<li>
+		Note that the value, no matter which element you click on, is equal to the same number: the last value of the for loop that caused it to end.
+	</li>
+	<li>
+		Take the section of the code where you create the click handler itself.  Move that click handler creator into its own function.  Remember to pass in the appropriate variables to create the click handler, including the dom element to apply the click handler to, as well as the for loop index at that moment of creation
+	</li>
+	<li>
+		In the click handler, access the local version of the index.
+	</li>
+	<li>
+		Run the code and test the click handler.  The index should now be correct.
+	</li>
+</ol>

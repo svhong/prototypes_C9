@@ -1,0 +1,11 @@
+.data_row:nth-child(odd){
+	background-color: whitesmoke;
+}
+.data_row{
+	cursor: pointer;
+}
+.data_row:hover{
+	color: white;
+	background-color: black;
+}
+
