@@ -17,19 +17,23 @@ $(document).ready(function(){
                 // movie1info = global_result.feed.entry[0]['im:image'][2].label;
                 for (var i = 0; i < response.length; i++) {
                     var movieimage = response[i]['im:image'][2].label;
-                    var movietitles = response[i].title.label;
+                    var director = response[i]['im:artist'].label;
+                    var movietitle = response[i]['im:name'].label;
+                    var title = $('<div>').text(movietitle).css({
+                        'font-size':'1em',
+                        'font-weight': 'bold'
+                    });
                     var image = $('<img>').attr('src',movieimage).css({
                         'width':'100%',
-                        'height':'100%'
+                        'height':'100%',
                     });
-                    var placeholder = $('<div>').append(movietitles).append(image).appendTo('#main').css({
+                    $('<div>').append(title).append(director).append(image).appendTo('#main').css({
                         'width':'150px',
                         'height':'200px',
                         'display':'inline-block',
-                        'margin':'10px',
-                        'color': 'red',
-                        'font-weight': 'bold'
-
+                        'margin':'40px',
+                        'color': 'black',
+                        'text-align': 'center'
                     });
 
                 }
