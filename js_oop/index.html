@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="java script objects">
+    <meta name="keywords" content="js, html, objects, lfz">
+    <script>
+        function coin_stack(initial) {
+            this.value = initial;
+            function add_coins(add) {
+                console.log('adding coins');
+                this.value += add;
+            }
+
+        }
+        var my_coin_stack = new coin_stack(50);
+        console.log('my_coin_stack contains ' + my_coin_stack.value + ' coins');
+
+    </script>
+</head>
+<body>
+    <h1>Javascript OOP Prototype</h1>
+</body>
+</html>
