@@ -5,17 +5,42 @@
     <meta name="description" content="java script objects">
     <meta name="keywords" content="js, html, objects, lfz">
     <script>
-        function coin_stack(initial) {
+        var coin_stack = function (initial){
             this.value = initial;
-            function add_coins(add) {
-                console.log('adding coins');
-                this.value += add;
+            this.add_coins = function (addValue) {
+                this.value += addValue;
+            };
+            this.remove_coins = function (removeValue){
+                if ( removeValue >= this.value){
+                    var current = this.value;
+                    this.value = 0;
+                    return current;
+                } else {
+                    this.value -= removeValue;
+                    return removeValue;
+                }
             }
-
-        }
+        };
+        /**********************METHOD TESTING******************/
         var my_coin_stack = new coin_stack(50);
         console.log('my_coin_stack contains ' + my_coin_stack.value + ' coins');
-
+        my_coin_stack.add_coins(15);
+        console.log('I have '+my_coin_stack.value+' coins in my coin stack');
+        my_coin_stack.remove_coins(37);
+        console.log('I have '+my_coin_stack.value+' coins in my coin stack');
+        my_coin_stack.remove_coins(55);
+        console.log('I have '+my_coin_stack.value+' coins in my coin stack');
+        coin_stack.prototype.transfer_coins = function (target,amount){
+            var transfer = target.remove_coins(amount);
+            this.add_coins(transfer);
+        }
+        var erics_coins = new coin_stack(50);
+        var dans_coins = new coin_stack(50);
+        console.log('Eric has: '+erics_coins.value+' coins',' Dan has: '+dans_coins.value+' coins');
+        erics_coins.transfer_coins(dans_coins,30);
+        console.log('Eric now has: '+erics_coins.value+' coins',' Dan now has: '+dans_coins.value+' coins');
+        dans_coins.transfer_coins(erics_coins,120);
+        console.log('Eric has: '+erics_coins.value+' coins',' Dan has: '+dans_coins.value+' coins');
     </script>
 </head>
 <body>
