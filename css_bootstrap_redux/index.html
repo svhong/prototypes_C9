@@ -1,72 +1,28 @@
 <!DOCTYPE HTML>
-<html lang="en">
-<meta charset="UTF-8">
-<title>CSS Bootstrap REDUX</title>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<html>
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<nav class="nav navbar-nav">
-    <div class="container-fluid">
-        <div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">SYD</a></li>
-                <li class="active"><a href="#">About Me</a></li>
-                <li class="active"><a href="#">Skills</a></li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects<span class="carret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">mBoutique</a></li>
-                        <li><a href="#">Memory Match</a></li>
-                        <li><a href="#">Calculator</a></li>
-                        <li><a href="#">Tic-Tac-Toe</a></li>
-                        <li><a href="#">Facebook Clone</a></li>
-                    </ul>                    
-                </li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">Contact Me</a></li>
-            </ul>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse">
+                </button>
+                <a class="navbar-brand" href="#">Hong</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">dropdown<span class="carret"></span></a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-</nav>
-<div class="container">
-    <br>
-    <br>
-    <br>
-    <div id="theCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#theCarousel" data-slide-to="1" ></li>
-            <li data-target="#theCarousel" data-slide-to="2" ></li>
-            <li data-target="#theCarousel" data-slide-to="3" ></li>
-            <li data-target="#theCarousel" data-slide-to="4" ></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="images/puppy1.jpeg" alt="the first puppy" width="460" height="345">
-            </div>
-            <div class="item active">
-                <img src="images/puppy2.jpg" alt="the second puppy" width="460" height="345">
-            </div>
-            <div class="item active">
-                <img src="images/puppy3.jpg" alt="the third puppy" width="460" height="345">
-            </div>
-            <div class="item active">
-                <img src="images/puppy4.jpg" alt="the fourth puppy" width="460" height="345">
-            </div>
-            <div class="item active">
-                <img src="images/puppy5.jpg" alt="the fifth puppy" width="460" height="345">
-            </div>
-        </div>
-        <a href="#theCarousel" class="left carousel-control" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron left" aria-hidden="true"></span>
-        </a>
-        <a href="#theCarousel" class="left carousel-control" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron left" aria-hidden="true"></span>
-        </a>
-    </div>
-</div>
+    </nav>
 </body>
 </html>
