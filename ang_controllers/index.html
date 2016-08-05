@@ -1,12 +1,84 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="prototype">
 <head>
     <meta charset="UTF-8">
     <title>Angular Controllers</title>
     <!-- Add the AngularJS CDN below -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 </head>
 <body>
+<div ng-controller="studentController as sc">
+    <input type="text" ng-model="sc.student.fName" placeholder="First Name">
+    <br>
+    <input type="text" ng-model="sc.student.lName" placeholder="Last Name">
+    <br>
+    <input type="text" ng-model="sc.student.email" placeholder="Email">
+    <br>
+    <textarea ng-model="sc.student.comments" placeholder="Enter Comments Here!" ng-disabled='sc.canIcomment()'></textarea>
+    <p>Characters Remaining: {{sc.comm_length()}}</p>
+    <br>
+    <button ng-click="sc.addstudent()">ADD</button>
+    <div ng-controller="tableController as tc">
+        <table>
+            <tbody>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Comments</th>
+                <th>Operation</th>
+            </tr>
+            <tr ng-repeat="student in studentArray">
+                <td>{{student.fName+' '+student.lName}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.comments}}</td>
+                <td>
+                    <button ng-click="tc.remove()">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>{{sc.student.fName}}</td>
+                <td>{{sc.student.lName}}</td>
+                <td>{{sc.student.email}}</td>
+                <td>{{sc.student.comments}}</td>
+            </tr>
+            </tbody>
+            <p>Table Count:{{tc.update()}}</p>
+        </table>
+    </div>
+</div>
+<script>
+    var app = angular.module('prototype',[]);
+    app.controller('studentController',function($scope){
+        this.student = {
+            'comments' : ''
+        };
+        $scope.studentArray = [];
+        this.max_comm_length = 30;
+        this.comm_length = function (){
+          return (this.max_comm_length - this.student.comments.length);
+        };
+        this.canIcomment = function(){
+            if(this.comm_length() <= 0){
+                return true;
+            } else {
+                return false;
+            }
+        };
+        this.addstudent = function(){
+            $scope.studentArray.push(this.student);
+            this.student = {};
+            this.student.comments = '';
+        };
+    });
+    app.controller('tableController',function($scope){
+        this.remove = function(index){
+            $scope.studentArray.splice(index,1);
+        };
+        this.update = function(){
+          return $scope.studentArray.length;
+        }
+    })
 
+</script>
 </body>
 </html>
