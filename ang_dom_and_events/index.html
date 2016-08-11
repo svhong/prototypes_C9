@@ -1,12 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
     <meta charset="UTF-8">
     <title>Angular DOM and Events</title>
     <!-- Add Angular CDN below -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
-<body>
-
+<body ng-init="var theBools = true; var counter = 0">
+<span ng-hide="theBools">The button has been enabled</span>
+<span ng-show="theBools">The button has been disabled</span>
+<br>
+<button ng-disabled="theBools" ng-click="counter = counter + 1">Can Clicks??</button>
+<br>
+<input type="checkbox" ng-model="theBools">
+<p>The button has been clicked {{counter}} times.</p>
 </body>
 </html>
