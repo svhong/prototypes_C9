@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="sgtApp">
+<html lang="en" ng-app="sgt_app">
 <head>
     <meta charset="UTF-8">
     <title>Service Creation Proto</title>
@@ -8,9 +8,8 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div ng-controller="ioController as ic">
-        <button ng-click="ic.getData()">Get Students</button>
-
+    <div ng-controller="studentController as sc">
+        <button ng-click="sc.get_student_data()">Get Students</button>
         <table>
             <tbody>
                 <tr>
@@ -19,7 +18,7 @@
                     <th>Course</th>
                     <th>Grade</th>
                 </tr>
-                <tr ng-repeat="student in ic.data.data">
+                <tr ng-repeat="student in sc.student_array">
                     <td>{{ student.id }}</td>
                     <td>{{ student.name }}</td>
                     <td>{{ student.course }}</td>
