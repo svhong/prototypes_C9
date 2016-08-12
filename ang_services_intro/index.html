@@ -1,12 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="musicApp">
 <head>
     <meta charset="UTF-8">
     <title>Angular Services Intro</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 </head>
-<body>
-
+<body ng-controller="musicController as mc">
+<div>
+    <input type="text" ng-model="mc.searchTerm">
+    <button ng-click="mc.getMusic()">Get Movies!</button>
+</div>
+<table>
+    <thead>
+    <tr>
+        <th>Artist</th>
+        <th>Song</th>
+        <th>Album Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="song in mc.music">
+        <td><img ng-src="{{song.artworkUrl30}}"></td>
+        <td>{{song.artistName}}</td>
+        <td>{{song.trackName}}</td>
+        <td>{{song.trackPrice}}</td>
+    </tr>
+    </tbody>
+</table>
 <script src="script.js"></script>
 </body>
 </html>
