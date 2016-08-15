@@ -2,4 +2,3 @@
 ### PHP OOP
 
 >#### Instructions can be found <a href="http://learning-fuze.github.io/prototypes_C9/#/PHP-OOP" target="_blank">HERE</a>
->#### Available 6/21/2016 @ 8:00pm
