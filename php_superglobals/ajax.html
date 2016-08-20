@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        function ajax(){
+            $.ajax({
+                url: 'index.php',
+                method: 'get',
+                data: {
+                    greeting:$('input').val(),
+                    textarea:$('textarea').val()
+                },
+                datatype: 'text',
+                success: function(response){
+                    console.log('ajax success!', response);
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<form action="index.php">
+    <input type="checkbox" value="howdy" name="greeting">hello
+    <br>
+    <textarea name="textarea" cols="30" rows="10">
+    </textarea>
+    <button type="button" id="ajaxbutton" onclick="ajax()">AJAX</button>
+</form>
+
+</body>
+</html>
