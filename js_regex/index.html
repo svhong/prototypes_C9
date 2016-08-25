@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_regex</title>
+    <script>
+        var fs1a =/e/;
+        var test1 = 'hello';
+        console.log(test1.search(fs1a));
+        var fs1b = /e/gi;
+        var test2 = 'HE entEred';
+        console.log(test2.match(fs1b).length);
+        var fs1c = /st[ia]r/g;
+        var test3 = ['stir the star', 'stim the stat', 'stir the stat', 'stim the star'];
+        console.log(fs1c.test(test3[0]));
+        var test3arr = [];
+        for(var i = 0; i < test3.length ; i++){
+            if(fs1c.test(test3[i])){
+                test3arr.push(test3[i]);
+            }
+        }
+        console.log(test3arr);
+        var phoneNumber = /1?[ 1-]?\(?([0-9]{3})\)?[ -]*?([0-9]{3})[ -]*?([0-9]{4})/;
+        var phoneArr = ["818 555 1212", "818-555-1212", "1818 555 1212", "1818-555-1212", "1 818 555 1212", "1-818-555-1212", "(818) 555-1212", "8185551212", "818      555      1212", "818 555-1212", "18185551212", "818555121", "818?5551212", "8185-55-1212", "555-1212"];
+        var phoneTestArr = [];
+        for(var j = 0; j < phoneArr.length ; j++){
+            if(phoneNumber.test(phoneArr[j])){
+                phoneTestArr.push(phoneArr[j]);
+            }
+        }
+        console.log(phoneTestArr);
+        var password = /^[a-zA-Z](?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{6,32}$/;
+        var passTestArr = ["helloDude3", "Pa5sWoRd", "thisIsaReallyL0NGpassword", "short", "nocapsbutanumber1", "5tartsWithANumber", "ALLCAPSBUT4NUMBER", "toDamnManyLettersForThisToBeAValidP4sswordYouKnowIt", "ill#g@l_characters"];
+        var passArr = [];
+        for(var k = 0; k < passTestArr.length; k++){
+            if(password.test(passTestArr[k])){
+                passArr.push(passTestArr[k]);
+            }
+        }
+        console.log(passArr);
+    </script>
+</head>
+<body>
+<h1>JavaScript - Regular Expressions</h1>
+</body>
+</html>
